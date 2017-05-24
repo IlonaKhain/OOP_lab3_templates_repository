@@ -28,6 +28,9 @@ public:
 		tail = NULL;
 		count = 0;
 	}
+	typedef DequeIterator<T> iterator;
+	typedef DequeIteratorConst<T> const_iterator;
+
  bool pushFront(T const& value);
  bool pushBack(T const& value);
  T popFront();

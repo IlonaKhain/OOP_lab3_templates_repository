@@ -1,4 +1,13 @@
-﻿  stdafx.cpp
-  lab3.cpp
+﻿  lab3.cpp
+e:\2 курс\ооп\oop_lab3_templates_repository\lab3\linkedlist.tpp(23): warning C4101: temp: неиспользованная локальная переменная
+  e:\2 курс\ооп\oop_lab3_templates_repository\lab3\linkedlist.tpp(22): note: при компиляции функции-члена "<Нет данных>" класса <Нет данных>
+  e:\2 курс\ооп\oop_lab3_templates_repository\lab3\linkedlist.h(35): note: см. ссылку на создание экземпляров функции шаблон при компиляции "int LinkedList<int>::pop(void)"
+  e:\2 курс\ооп\oop_lab3_templates_repository\lab3\lab3.cpp(20): note: см. ссылку на создание экземпляров класса шаблон при компиляции "LinkedList<int>"
+e:\2 курс\ооп\oop_lab3_templates_repository\lab3\linkedlist.tpp(70): warning C4101: temp: неиспользованная локальная переменная
+  e:\2 курс\ооп\oop_lab3_templates_repository\lab3\linkedlist.tpp(69): note: при компиляции функции-члена "<Нет данных>" класса <Нет данных>
+  e:\2 курс\ооп\oop_lab3_templates_repository\lab3\linkedlist.h(42): note: см. ссылку на создание экземпляров функции шаблон при компиляции "int &LinkedList<int>::peek(void)"
+e:\2 курс\ооп\oop_lab3_templates_repository\lab3\linkedlist.tpp(51): warning C4101: temp: неиспользованная локальная переменная
+  e:\2 курс\ооп\oop_lab3_templates_repository\lab3\linkedlist.tpp(50): note: при компиляции функции-члена "<Нет данных>" класса <Нет данных>
+  e:\2 курс\ооп\oop_lab3_templates_repository\lab3\linkedlist.h(39): note: см. ссылку на создание экземпляров функции шаблон при компиляции "int LinkedList<int>::peek(void) const"
   lab3.vcxproj -> E:\2 курс\ООП\OOP_lab3_templates_repository\Debug\lab3.exe
   lab3.vcxproj -> E:\2 курс\ООП\OOP_lab3_templates_repository\Debug\lab3.pdb (Full PDB)

@@ -26,6 +26,8 @@ public:
 	friend class ListIterator<T>;
 	friend class ListIteratorConst<T>;
 
+	typedef ListIterator<T> iterator;
+	typedef ListIteratorConst<T> const_iterator;
 	 bool push(T const& value);
 	 bool pushFront(T const& value) { return false; };
 	 bool pushBack(T const& value) { return nullptr; };

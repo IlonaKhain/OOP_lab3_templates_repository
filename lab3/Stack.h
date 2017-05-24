@@ -20,6 +20,8 @@ class Stack : virtual public PushPopContainer<T> {
 	public:
 		friend class StackIterator<T>;
 		friend class StackIteratorConst<T>;
+		typedef StackIterator<T> iterator;
+		typedef StackIteratorConst<T> const_iterator;
 		Stack<T>() // constructure
 		{
 			top = NULL;

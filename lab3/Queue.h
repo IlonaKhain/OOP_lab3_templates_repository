@@ -19,6 +19,10 @@ class Queue : virtual public PushPopContainer<T> {
 public:
 	friend class QueueIterator<T>;
 	friend class QueueIteratorConst<T>;
+
+	typedef QueueIterator<T> iterator;
+	typedef QueueIteratorConst<T> const_iterator;
+
 	virtual bool push(T const& value);
     T pop();
 	T peek() const;

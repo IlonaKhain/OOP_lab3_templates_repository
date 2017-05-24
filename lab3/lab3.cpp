@@ -17,13 +17,22 @@ using namespace std;
 
 int main()
 {
-		Stack<int> st, st2;
+	LinkedList<int> ll;
+	ll.push(1);
+	ll.push(4);
+	ll.push(2);
+	ll.push(3);
+	
+	cout << " This is ll after push " << ll << endl;
+	selection_sort(ll);
+	cout << " This is ll after sort " << ll << endl;
+	Queue<int> st, st2;
 		st.push(1);
 		st.push(2);
 		st.push(3);
 		st.push(4);
 		cout << " This is stack1 after push " << st << endl;
-		st.selection_sort(st);
+		selection_sort(st);
 
 		cout << " This is stack1 after sort " << st << endl;
 		LinkedDeque<int> ld;
@@ -33,7 +42,7 @@ int main()
 		ld.pushBack(10);
 		ld.pushBack(1);
 		cout << " This is deque after push " << ld << endl;
-		ld.selection_sort(ld);
+		selection_sort(ld);
 
 		cout << " This is deque after sort " << ld << endl;
 		//st2 = st; realize

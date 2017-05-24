@@ -14,6 +14,8 @@ class StaticArray : virtual public IndexedContainer<T> {
 public:
 	friend class ArrayIterator<T>;
 	friend class ArrayIteratorConst<T>;
+	typedef ArrayIterator<T> iterator;
+	typedef ArrayIteratorConst<T> const_iterator;
 	StaticArray(int number)
 	{
 		if (number < 10000)

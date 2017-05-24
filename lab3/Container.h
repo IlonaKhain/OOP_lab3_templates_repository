@@ -4,6 +4,7 @@
 #include <string>
 #include <algorithm>
 #include <vector>
+#include <iterator>
 #include <memory>
 
 #include "Iterator.h"
@@ -22,6 +23,9 @@ public:
 	
 	};
 	friend class Iterator<T>;
+	typedef Iterator<T> iterator;
+	typedef Iterator<const T&> const_iterator;
+	typedef T variableType;
 	friend ostream& operator<<(ostream &os, Container<T> const & c) {
 		os << c.toString();
 		return os;
@@ -45,7 +49,7 @@ public:
 		else return false;
 	}
 	
-	
+	//dynamic sort
 	void selection_sort(Container<T> &c)
 	{
 		auto it1 =this->createIterator();	
@@ -86,4 +90,36 @@ public:
 	virtual Iterator<const T&>* createIteratorConst() const = 0;
 	virtual Iterator<T&>* createIterator() = 0;
 	virtual ~Container() {};
+	
 };
+//static sort
+template <typename C>
+void selection_sort(C &c)
+{
+	//auto it1 = this->createIterator();
+	auto it1 = typename C::iterator(c);
+	for (int i = 0; i < c.size() - 1; i++)
+	{
+		//T& begin = it1->next();
+		typename C::variableType& begin = it1.next();
+		//T& min = begin;
+		typename C::variableType& min = begin;
+		//auto it2 = this->createIterator();
+		auto it2 = typename C::iterator(c);
+		int k = 0;
+		while (k != i) {
+			it2.next();
+			k++;
+		}
+		while (it2.hasNext()) {
+			//T& temp = it2->next();
+			typename C::variableType& temp = it2.next();
+			if (min > temp)
+			{
+				swap(begin, temp);
+			}
+		}
+		//delete it2;
+	}
+	//delete it1;
+}
